@@ -5,7 +5,9 @@
 # tg_api_token - was sourced from .env file.
 
 ### The recepient chat id. Get it with bot: @getidsbot
-# tg_user_chat_id - was sourced from .env file.
+### Insert it to .env file - if you send messages to only one specific user or chat (Bot-informer, for example),
+### otherwise, the script will always ask for chat id.
+[ -z "$tg_user_chat_id" ] && read -p "Please, type the recepient's chat_id... (you can get it from @getidsbot bot)" "tg_user_chat_id"
 
 ### Check if curl is installed:
 if ! [ -x "$(command -v curl)" ];
