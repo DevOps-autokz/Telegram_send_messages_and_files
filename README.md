@@ -8,8 +8,8 @@ git clone git@github.com:DevOps-autokz/Telegram_send_messages_and_files.git
 cd Telegram_send_messages_and_files
 touch .env
 
-\### Insert your own Telegram API Token to .env file:
-echo tg_api_token={your_token}
+\### Insert your own Telegram API Token to .env file: \
+echo tg_api_token={your_token} \
 \# More info about this token: https://core.telegram.org/bots/features#botfather
 
 \### Insert your recepient's 'user_chat_id' to .env file:
