@@ -14,7 +14,7 @@ if [ -f .env ] ;
 	. .env
     else
 	read -p "PLEASE, TYPE TELEGRAM API TOKEN... " "tg_api_token" && \
-	echo "tg_api_token=${tg_api_token}" >> "${script_home}/.env"
+	echo "tg_api_token=${tg_api_token}" >> .env
 fi
 
 ### On next launch, script will load Telegram API Token (tg_api_token) - from .env file.
