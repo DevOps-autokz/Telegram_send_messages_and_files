@@ -23,7 +23,7 @@ fi
 ### Insert it to .env file - if you send messages to only one specific user or chat (Bot-informer, for example),
 ### otherwise, the script will ask ithe chat id each time.
 [ -z "$tg_user_chat_id" ] && \
-	read -p "PLEASE, TYPE THE RECEPIENTS CHAT_ID... (you can get it from @getidsbot bot)" "tg_user_chat_id"
+	read -p "PLEASE, TYPE THE RECEPIENTS CHAT_ID... (you can get it from @getidsbot bot) " "tg_user_chat_id"
 
 ### Check if curl is installed:
 if ! [ -x "$(command -v curl)" ];
