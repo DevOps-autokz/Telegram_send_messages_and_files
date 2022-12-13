@@ -23,3 +23,5 @@ echo tg_user_chat_id={your_token}
 
 sudo ln -s "${HOME}/scripts/Telegram_send_messages_and_files/telegram-send-message.sh" /usr/bin/   \
 sudo ln -s "${HOME}/scripts/Telegram_send_messages_and_files/telegram-send-file.sh" /usr/bin/
+
+echo 'export PATH=$PATH:$HOME/scripts/Telegram_send_messages_and_files' >> ~/.bashrc

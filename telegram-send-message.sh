@@ -1,7 +1,4 @@
 #!/bin/bash
-### Set script's home location actual for you:
-script_home=""
-
 ### Telegram API Token should be provided in .env file
 # More about API Token check here: https://core.telegram.org/bots/features#botfather
 ### if .env file does not exist, 
@@ -9,8 +6,6 @@ script_home=""
 ### The .env file will be created with echo command.
 if [ -f .env ] ;
     then
-	[ -n "$script_home" ] && \
-	. "${script_home}"/.env || \
 	. .env
     else
 	read -p "PLEASE, TYPE TELEGRAM API TOKEN... " "tg_api_token" && \
@@ -19,7 +14,7 @@ fi
 
 ### On next launch, script will load Telegram API Token (tg_api_token) - from .env file.
 
-### The recepient chat id. Get it with bot: @getidsbot
+### The recepient chat id. Get it from bot: @getidsbot
 ### Insert it to .env file - if you send messages to only one specific user or chat (Bot-informer, for example),
 ### otherwise, the script will ask ithe chat id each time.
 [ -z "$tg_user_chat_id" ] && \
@@ -47,7 +42,6 @@ if ! [ -x "$(command -v curl)" ];
 "
 exit 1
 fi
-
 
 ### Check if the message was passed as argument ($1).
 ### If not, request user to type the message:
