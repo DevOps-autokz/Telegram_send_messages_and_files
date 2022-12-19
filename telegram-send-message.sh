@@ -1,9 +1,9 @@
 #!/bin/bash
 ### Telegram API Token should be provided in .env file
-# More about API Token check here: https://core.telegram.org/bots/features#botfather
+# More info about API Token is here: https://core.telegram.org/bots/features#botfather
 ### if .env file does not exist, 
 ### the script asks user for the Telegram API_TOKEN and inserts it to .env file.
-### The .env file will be created with echo command.
+### On next launch, script will load Telegram API Token (tg_api_token) - from .env file.
 if [ -f .env ] ;
     then
 	. .env
@@ -12,10 +12,8 @@ if [ -f .env ] ;
 	echo "tg_api_token=${tg_api_token}" >> .env
 fi
 
-### On next launch, script will load Telegram API Token (tg_api_token) - from .env file.
-
-### The recepient chat id. Get it from bot: @getidsbot
-### Insert it to .env file - if you send messages to only one specific user or chat (Bot-informer, for example),
+### The recepient's chat id. Get it from bot: @getidsbot
+### Fill it in .env file - if you are going send messages to one specific user or chat (Bot-informer etc),
 ### otherwise, the script will ask ithe chat id each time.
 [ -z "$tg_user_chat_id" ] && \
 	read -p "PLEASE, TYPE THE RECEPIENTS CHAT_ID... (you can get it from @getidsbot bot) " "tg_user_chat_id"
@@ -45,7 +43,7 @@ fi
 
 ### Check if the message was passed as argument ($1).
 ### If not, request user to type the message:
-[[ -n "$1" ]] && message="$1" || \
+[[ -n "$@" ]] && message="$@" || \
 	read -p "PLEASE, TYPE YOUR MESSAGE:" "message"
 
 ### Send the message via Telegram API:
