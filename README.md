@@ -10,12 +10,12 @@ touch .env
 
 \### Telegram API Token: https://core.telegram.org/bots/features#botfather \
 \# Insert your own Telegram API Token to .env file: \
-echo tg_api_token={your_token} >> .env \
+echo tg_api_token={your_token} >> .env 
 
-\### The recepient's chat id. Get it from bot: @getidsbot
-# Fill it in .env file - if you are going send messages to one specific user or chat (Bot-informer etc),
-# otherwise, the script will ask ithe chat id each time.
-echo tg_user_chat_id={your_token} .env \
+\### The recepient's chat id. Get it from bot: @getidsbot \
+\# Fill it in .env file - if you are going send messages to one specific user or chat (Bot-informer etc), \
+\# otherwise, the script will ask ithe chat id each time. \
+echo tg_user_chat_id={your_token} .env 
 
 
 \# Usage: \
