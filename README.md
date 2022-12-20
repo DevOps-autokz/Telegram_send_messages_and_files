@@ -5,7 +5,7 @@ This script allows to send messages and files (attachments) to Telegram users.
 git clone git@github.com:DevOps-autokz/Telegram_send_messages_and_files.git
 
 \### cd to cloned repo and add your own .env file: \
-cd Telegram_send_messages_and_files
+cd Telegram_send_messages_and_files \
 touch .env
 
 \### Insert your own Telegram API Token to .env file: \
@@ -17,8 +17,8 @@ echo tg_user_chat_id={your_token}
 
 
 \### Usage:
-./telegram-send-message.sh 'message_text'
-./telegram-send-file.sh path_to_
+./telegram-send-message.sh 'message text'
+./telegram-send-file.sh path_to_file
 
 
 sudo ln -s "${HOME}/scripts/Telegram_send_messages_and_files/telegram-send-message.sh" /usr/bin/   \
