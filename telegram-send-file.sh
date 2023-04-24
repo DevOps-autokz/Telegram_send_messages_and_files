@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
-#title           :telegram-send-message.sh
-#description     :This script will send text-message to Telegram.
+#title           :telegram-send-file.sh
+#description     :This script will send file attachment to Telegram.
 #author		 :i2r (i2r.devops@gmail.com)
 #date            :08-12-2022
 #version         :1.0    
-#usage		 :./telegram-send-message.sh
-#notes           :Install curl to use this script.
+#usage		 :./telegram-send-file.sh
+#notes           :Install curl to use this script. Send just one file atime
 #==============================================================================
 
 set -o errexit
