@@ -26,6 +26,18 @@ otherwise, don't insert it to .env and let the script ask the recipient's Chat I
 >echo tg_user_chat_id={your_id} >> .env 
 
 ---
+To install curl on Ubuntu (Debian, Mint etc):
+sudo apt update -y && sudo apt install -y curl
+
+To install curl on Redhat (CentOS/Alma, Fedora etc):
+sudo dnf install -y curl or sudo yum install -y curl
+
+To install curl on Arch (Manjaro, EndeavourOS): 
+sudo pacman -Sy curl
+
+To install curl on Alpine: 
+sudo apk add curl
+
 
 Usage: 
 >./telegram-send-message.sh 'message text' \
